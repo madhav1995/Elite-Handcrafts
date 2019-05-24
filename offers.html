@@ -1,43 +1,116 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Elite Handcrafts</title>
+    <title>OFFERS</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+    <script src="slider.js"></script>
   </head>
 
   <body>
-    <div class="container"><a href="index.html"><img src="images/elite-logo.jpg" id="logo" /></a></div>
-    <div><h1 class="heading1">Elite Handcrafts</h1></div>
+    <div class="container"><a href="index.html"><img src="images/elitehandcrafts.png" id="logo" /></a></div>
+    <div><h1 class="heading1" style="font-family:Acme;color:gold">ELITE HANDCRAFTS</h1></div>
     <br />
-    <div class="navbar">
-      <a href="index.html">Home</a>
-      <a href="himalayan_salt.html">Offers</a>
+   <div class="navbar">
+      <a href="index.html">HOME</a>
+      <a href="offers.html">OFFERS</a>
       <div class="dropdown">
-        <button class="dropbtn"> Products
+        <button class="dropbtn"> PRODUCTS
         </button>
         <div class="dropdown-content">
-            <a href="himalayan_salt.html">Himalayan Salt</a>
-            <a href="bedroom.html">Bedroom & Living</a> 
-            <a href="outdoor.html">Outdoor</a>
-            <a href="others.html">Others</a>
+            <a href="himalayan_salt.html">HIMALAYAN SALT</a>
+            <a href="bedroom.html">BEDROOM AND LIVING</a> 
+            <a href="outdoor.html">OUTDOOR</a>
+            <a href="others.html">OTHERS</a>
         </div>
       </div> 
-      <a href="locations.html">Locations</a>
-      <a href="contact.html">Contact Us</a>
+      <a href="locations.html">LOCATIONS</a>
+      <a href="contact.html">CONTACT US</a>
+      <a href="VIP.html">BECOME A VIP</a>
     </div>
 
-    <div class="pageHeading"><h4>Offers</h4></div>
 
-      <h2 style="padding: 100px 0; text-align: center; color: brown;">
-          Under Construction
-      </h2>
-    
+    <div class="pageHeading"><h4 style=" font-style: bold ;font-family: Acme;
+  font-size: 40px; color:gold">OFFERS</h4></div>
+<!-- Slideshow container -->
+<div class="slider">
 
-    <footer class="footer">
-      <h2>Elite Handcrafts</h2>
-      <p>© 2019 Elite handcrafts. All Rights Reserved</p>
-      <a href="https://www.facebook.com/EliteHandcrafts02/" class="fa fa-facebook"></a>
+    <div id="img">
+      <img src="e.jpg">
+    </div>
+
+  </div>
+
+  <script>
+
+    var images = ['images/offers1.jpg', 'images/offers2.jpg', 'images/offers3.jpg'];
+
+    var x = 0;
+
+    var imgs = document.getElementById('img');
+
+    setInterval(slider, 2000);
+
+
+    function slider() {
+
+      if (x < images.length) {
+        x = x + 1;
+      } else {
+        x = 1;
+      }
+
+
+      imgs.innerHTML = "<img src=" + images[x - 1] + ">";
+
+
+    }
+
+
+  </script>
+
+
+  <style type="text/css">
+    .slider {
+      width: 80%;
+      height: 500px;
+      margin: 30px auto;
+      box-sizing: border-box;
+      overflow: hidden;
+      box-shadow: 5px 5px 10px grey;
+
+    }
+
+    img {
+      width: 80%;
+      height: 80%;
+      animation: ani 2s linear;
+      position: absolute;
+
+    }
+
+    @keyframes ani {
+      0% {
+        transform: scale(1.2);
+      }
+      10% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+
+
+ <div>
+    <footer class="footer" style="color: gold">
+      <h2 style="font-family: Acme">ELITE HANDCRAFTS</h2>
+      <p style="font-family: Acme"> COPYRIGHT 2019 ELITE HANDCRAFTS. ALL RIGHTS RESERVED </p>
+      <a href="https://www.facebook.com/EliteHandcrafts02/" class="fa fa-facebook" style="font-size: 30px"></a>
+      <a href="https://www.instagram.com/elitehandcrafts/?hl=en" class="fa fa-instagram" style="font-size: 30px"></a>
     </footer>
+    </div>
   </body>
 </html>

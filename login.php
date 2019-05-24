@@ -1,71 +1,61 @@
-<!DOCTYPE html>
-		<html>
-		<head>
-			<title>ADMIN Login</title>
-		<link rel="stylesheet" type="text/css" href="login.css">
-		</head>
-		<body>
-			<form method="POST">
-				<table>
-					<tr>
-						<td>User Type</td>
-						<td>
-							<select name="type">
-								<option value="-1">Select User Type</option>
-								<option value="Admin">Admin</option>
-								<option value="User">User</option>
-						    </select>
-						</td>
-					</tr>
-					<tr>
-						<td>Username</td>
-						<td><input type="text" name="username" placeholder="username"></td>
-					</tr>
-					<tr>
-						<td>Password</td>
-						<td><input type="password" name="pwd" placeholder="password"></td>
-					</tr>
-					<tr>
-						<td>&nbsp;</td>
-						<td><input type="submit" name="submit" value="Login"></td>
-					</tr>
-				</table>
-			</form>
-		</body>
-		</html>
-		<?php 
- 
-         $servername = "localhost";
-         $username = "root";
-         $password = "";
-         $db = "multilevel";
+ <?php
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $db);
+if(isset($_POST['sign-in'])) {
+	
+	require 'DB.php';
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-echo "<h3>© 2019 Elite handcrafts. All rights reserved</h3>";
+	$mailUid = $_POST['email'];
+	$password = $_POST['password'];
 
-         if(isset($_POST['submit']))
-         {
-         	$type = $_POST['type'];
-         	$username = $_POST['username'];
-         	$password = $_POST['pwd'];
+	if (empty($mailUid) || empty($password)) {
+	header("location: login.html?error=emptyfields");
+	exit();
+}
+else {
+	$sql = "SELECT * FROM users WHERE emailUsers= '$mailUid';";
+	$stmt = mysqli_stmt_init($conn);
+	if(!mysqli_stmt_prepare($stmt, $sql)) {
+		header("location: login.html?error=notregistered");
+		exit();
+    }
+    else {
+    	
+    	//mysqli_stmt_bind_param($stmt, "ss", $mailuid, $mailuid);
+    	mysqli_stmt_execute($stmt);
+    	$result = mysqli_stmt_get_result($stmt);
+    	if ($row = mysqli_fetch_assoc($result))  {
+    		$pwdCheck = password_verify($password, $row['pwdUsers']);
+            if ($password != $row['pwdUsers'])
+    		//if($pwdcheck == false) 
+            {
+                header("location: login.html?error=wrongpwd");
+    			exit();
 
-         	$sql="select * from login where username='$username' and password='$password' and type='$type'";
-         	$result=mysqli_query($conn, $sql);
+    		}
+            else
+//    		else if($pwdcheck == true) 
+            {
+    			session_start();
+    			$session['userId'] = $row['idusers'];
+    			$session['userUid'] = $row['uidUsers'];
 
-         	while($row=mysqli_fetch_array($result, MYSQLI_ASSOC)){
-         		if($row['username']==$username && $row['password']==$password && $row['type']=='Admin')
-         		{
-         			header("Location: admin.html");
-         		}elseif($row['username']==$username && $row['password']==$password && $row['type']=='User')
-         		{
-         			header("Location: user.html");
-         		}
-         	}
-         }
-		 ?>
+    			header("location: index.php?login=success");
+    			exit();
+
+    		}
+
+    	}
+    	else {
+    		header("location: offers.html?error=nouser");
+    		exit();
+    	}
+
+
+    }
+
+
+}
+}
+
+?>
+

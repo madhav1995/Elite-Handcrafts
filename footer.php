@@ -10,6 +10,7 @@
       <h2>Elite Handcrafts</h2>
       <p>© 2019 Elite handcrafts. All Rights Reserved</p>
       <a href="https://www.facebook.com/EliteHandcrafts02/" class="fa fa-facebook"></a>
+      <a href="https://www.instagram.com/elitehandcrafts/?hl=en" class="fa fa-instagram"></a>
     </footer>
   </body>
 </html>

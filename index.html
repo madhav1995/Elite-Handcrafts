@@ -4,76 +4,150 @@
     <title>Elite Handcrafts</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+    <script src="slider.js"></script>
 
   </head>
   <div class="BG">
-<div class="container"><a href="index.html"><img src="images/elite-logo.jpg" id="logo" /></a></div>
-    <div><h1 class="heading1">Elite Handcrafts</h1></div>
-
+<div class="container"><a href="index.html"><img src="images/elitehandcrafts.png" id="logo" /></a></div>
+    <div><h1 class="heading1" style="font-family:Acme;color:gold">ELITE HANDCRAFTS</h1></div>
 <div class="enquiry" style="position: absolute;
-top: 10px;
+top:  10px;
 right: 10px;
-"><a href="franchise.html"><img src="images/franchise2.gif" id="enquiry" / width="250px" height="30px"></a></div>
+"><a href="franchise.html" style="font-family: Acme;color:gold">FRANCHISE</a></div>
 <br />
   
     <div class="navbar">
-      <a href="index.html">Home</a>
-      <a href="himalayan_salt.html">Offers</a>
+      <a href="index.html">HOME</a>
+      <a href="offers.html">OFFERS</a>
       <div class="dropdown">
-        <button class="dropbtn"> Products
+        <button class="dropbtn"> PRODUCTS
         </button>
         <div class="dropdown-content">
-            <a href="himalayan_salt.html">Himalayan Salt</a>
-            <a href="bedroom.html">Bedroom & Living</a> 
-            <a href="outdoor.html">Outdoor</a>
-            <a href="others.html">Others</a>
+            <a href="himalayan_salt.html">HIMALAYAN SALT</a>
+            <a href="bedroom.html">BEDROOM AND LIVING</a> 
+            <a href="outdoor.html">OUTDOOR</a>
+            <a href="others.html">OTHERS</a>
         </div>
       </div> 
-      <a href="locations.html">Locations</a>
-      <a href="contact.html">Contact Us</a>
-      <a href="VIP.html">Become A VIP</a>
+      <a href="locations.html">LOCATIONS</a>
+      <a href="contact.html">CONTACT US</a>
+      <a href="VIP.html">BECOME A VIP</a>
     </div>
 
 
     <body>
-    <div><img src="images/slide.002.jpg" class="homeimg" /></div>
-    
+    <!-- Slideshow container -->
 
+
+
+
+
+ <div class="slider">
+
+    <div id="img">
+      <img src="e.jpg">
+    </div>
+
+  </div>
+
+  <script>
+
+    var images = ['BG.jpg', 'SBG.jpg', 'elite.jpg'];
+
+    var x = 0;
+
+    var imgs = document.getElementById('img');
+
+    setInterval(slider, 2000);
+
+
+    function slider() {
+
+      if (x < images.length) {
+        x = x + 1;
+      } else {
+        x = 1;
+      }
+
+
+      imgs.innerHTML = "<img src=" + images[x - 1] + ">";
+
+
+    }
+
+
+  </script>
+
+
+  <style type="text/css">
+    .slider {
+      width: 90%;
+      height: 400px;
+      margin: 20px auto;
+      box-sizing: border-box;
+      overflow: hidden;
+      box-shadow: 5px 5px 10px grey;
+
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      animation: ani 2s linear;
+
+    }
+
+    @keyframes ani {
+      0% {
+        transform: scale(1.2);
+      }
+      10% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  </style>
+
+
+</div>
     <div class="story">
-      <h3>Our Story</h3>
-      <p>
+      <h2 style="font-family:Acme; font-size: 40px;color:gold">OUR STORY</h2>
+      <p style="font-family:Acme; font-size: 30px; color:gold " >
         We are wholesale as well as retail and have a wide variety of Indian
         products, smaller and bigger Salt lamps, Home decor, clothing etc made
-        lovingly by artisans.
+        lovingly by artisans. Elite Handcrafts is a well-established family based wholesale business based in Brisbane, Queensland. We have been supplying our customers since 1986 with unique, high quality and very different products imported from India.</p>
+
+<p style="font-family:Acme;font-size: 30px;color:gold">The main benefits of dealing with Elite Handcrafts are the fast moving, great value range of authentic artefacts that we source from India. Our range will give you colourful, culturally correct items that sell fast, delivering great profit margins for your store. Our extensive range of incense includes the ever popular Nag Champa just as one part of our current selection of genuine Indian incense.
       </p>
     </div>
-    <div class="flex-container">
+    <div class="flex-container" >
       <div>
         <img src="images/salt.jpg" class="hpimage" />
-        <p><a href="himalayan_salt.html" class="linkBtn"> Himalayan Salt </a></p>
+        <p><a href="himalayan_salt.html" class="linkBtn" style="color: gold"> HIMALAYAN SALT </a></p>
       </div>
       <div>
         <img src="images/bedroom.jpg" class="hpimage" />
-        <p> <a href="bedroom.html" class="linkBtn"> Bedroom and Living </a></p>
+        <p> <a href="bedroom.html" class="linkBtn" style="color: gold"> BEDROOM AND LIVING </a></p>
       </div>
       <div>
         <img src="images/outdoor.jpg" class="hpimage" />
-        <p> <a href="outdoor.html" class="linkBtn">Outdoor</a></p>
+        <p> <a href="outdoor.html" class="linkBtn" style="color: gold">OUTDOOR</a></p>
       </div>
       <div>
         <img src="images/others.jpg" class="hpimage" />
-        <p> <a href="others.html" class="linkBtn">Others</a></p>
+        <p> <a href="others.html" class="linkBtn" style="color: gold">OTHERS</a></p>
       </div>
-    </div>
-    <footer class="footer">
-      <h2>Elite Handcrafts</h2>
-      <p>©2019 Elite handcrafts. All Rights Reserved</p>
-      <a href="https://www.facebook.com/EliteHandcrafts02/" class="fa fa-facebook"></a>
-      <a href="https://www.instagram.com/elitehandcrafts/?hl=en" class="fa fa-instagram"></a>
-      <div class="payment-container">
-      <img src="images/paypal-footer.png" alt="Payments">
-      </div>
-    </footer>
   </div>
+    <div>
+    <footer class="footer" style="color: gold">
+      <h2 style="font-family: Acme">ELITE HANDCRAFTS</h2>
+      <p style="font-family: Acme"> COPYRIGHT 2019 ELITE HANDCRAFTS. ALL RIGHTS RESERVED </p>
+      <a href="https://www.facebook.com/EliteHandcrafts02/" class="fa fa-facebook" style="font-size: 30px"></a>
+      <a href="https://www.instagram.com/elitehandcrafts/?hl=en" class="fa fa-instagram" style="font-size: 30px"></a>
+    </footer>
+    </div>
   </body>
 </html>
