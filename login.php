@@ -1,61 +1,39 @@
- <?php
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LOGIN</title>
+    <link href='login.css' rel='stylesheet' type='text/css'>
+    <link href='style.css' rel='stylesheet' type='text/css'>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+        <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
 
-if(isset($_POST['sign-in'])) {
-	
-	require 'DB.php';
+</head>
+<?php
+ require "header.php";
+  ?>
+<body>
 
-	$mailUid = $_POST['email'];
-	$password = $_POST['password'];
+<div class="box">
+<h1>LOG IN</h1>
 
-	if (empty($mailUid) || empty($password)) {
-	header("location: login.html?error=emptyfields");
-	exit();
-}
-else {
-	$sql = "SELECT * FROM users WHERE emailUsers= '$mailUid';";
-	$stmt = mysqli_stmt_init($conn);
-	if(!mysqli_stmt_prepare($stmt, $sql)) {
-		header("location: login.html?error=notregistered");
-		exit();
-    }
-    else {
-    	
-    	//mysqli_stmt_bind_param($stmt, "ss", $mailuid, $mailuid);
-    	mysqli_stmt_execute($stmt);
-    	$result = mysqli_stmt_get_result($stmt);
-    	if ($row = mysqli_fetch_assoc($result))  {
-    		$pwdCheck = password_verify($password, $row['pwdUsers']);
-            if ($password != $row['pwdUsers'])
-    		//if($pwdcheck == false) 
-            {
-                header("location: login.html?error=wrongpwd");
-    			exit();
+ <form action="login form.php" method="post">
+<input type="email" name="email" placeholder="email" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email" />
+  
+<input type="password" name="password" placeholder="password" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email" />
+ 
+ <Button class="btn" name="sign-in" value="1" type="submit">SIGN IN </Button> 
+<!--<a href="login.php"><div class="btn" name = sign-in>Sign In</div></a>--> <!-- End Btn -->
 
-    		}
-            else
-//    		else if($pwdcheck == true) 
-            {
-    			session_start();
-    			$session['userId'] = $row['idusers'];
-    			$session['userUid'] = $row['uidUsers'];
+<a href="signup.php"><div id="btn2">SIGN UP</div></a> <!-- End Btn2 -->
+  
+</div> <!-- End Box -->
+  
+</form>
 
-    			header("location: index.php?login=success");
-    			exit();
-
-    		}
-
-    	}
-    	else {
-    		header("location: offers.html?error=nouser");
-    		exit();
-    	}
-
-
-    }
-
-
-}
-}
-
-?>
-
+<p id="box">Forgot your password? <u>Click Here!</u></p>
+  
+<?php
+ require "footer.php";
+  ?>
+ </body>
+</html>
