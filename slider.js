@@ -5,7 +5,7 @@
 
     var imgs = document.getElementById('img');
 
-    setInterval(slider, 2000);
+    setInterval(slider, 10000);
 
 
     function slider() {

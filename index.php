@@ -4,8 +4,7 @@
   <head>
     <title>Elite Handcrafts</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap" rel="stylesheet">
   </head>
  
 <?php
@@ -73,19 +72,19 @@
     <div class="flex-container">
       <div>
         <img src="images/salt.jpg" class="hpimage" />
-        <p><a href="himalayan_salt.php" class="linkBtn" style="color: gold"> HIMALAYAN SALT </a></p>
+        <p><span class="demo"> HIMALAYAN SALT</p>
       </div>
       <div>
         <img src="images/bedroom.jpg" class="hpimage" />
-        <p> <a href="bedroom.php" class="linkBtn" style="color: gold"> BEDROOM AND LIVING </a></p>
+        <p> <a href="bedroom.php" class="linkBtn"> BEDROOM AND LIVING </a></p>
       </div>
       <div>
         <img src="images/outdoor.jpg" class="hpimage" />
-        <p> <a href="outdoor.php" class="linkBtn" style="color: gold">OUTDOOR</a></p>
+        <p> <a href="outdoor.php" class="linkBtn">OUTDOOR</a></p>
       </div>
       <div>
         <img src="images/others.jpg" class="hpimage" />
-        <p> <a href="others.php" class="linkBtn" style="color: gold">OTHERS</a></p>
+        <p> <a href="others.php" class="linkBtn">OTHERS</a></p>
       </div>
   </div>
 <?php

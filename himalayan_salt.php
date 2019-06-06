@@ -3,8 +3,8 @@
   <head>
     <title>HIMALAYAN SALT</title>
     <link rel="stylesheet" href="style.css" />
-    <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
-  </head>
+ <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto&display=swap" rel="stylesheet">
+   </head>
    <?php
  require "header.php";
   ?>

@@ -3,8 +3,8 @@
   <head>
     <title> OUTDOOR </title>
     <link rel="stylesheet" href="style.css" />
-    <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
-  </head>
+ <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto&display=swap" rel="stylesheet">
+   </head>
 
   <body>
     <?php

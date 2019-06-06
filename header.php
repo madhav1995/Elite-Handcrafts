@@ -2,6 +2,7 @@
 <head>
 	<title></title>
 	 <link rel="stylesheet" href="style.css" />
+   <link href="https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
    <div class="BG">
@@ -12,16 +13,7 @@
     <div class="navbar">
       <a href="index.php">HOME</a>
       <a href="offers.php">OFFERS</a>
-      <div class="dropdown">
-        <button class="dropbtn"> PRODUCTS
-        </button>
-        <div class="dropdown-content">
-            <a href="himalayan_salt.php">HIMALAYAN SALT</a>
-            <a href="bedroom.php">BEDROOM AND LIVING</a> 
-            <a href="outdoor.php">OUTDOOR</a>
-            <a href="others.php">OTHERS</a>
-        </div>
-      </div> 
+      <a href="products.php">PRODUCTS</a> 
       <a href="locations.php">LOCATIONS</a>
       <a href="contact.php">CONTACT US</a>
       <a href="elitestarclub.php">ELITE STAR CLUB</a>

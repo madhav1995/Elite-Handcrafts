@@ -1,5 +1,5 @@
 body {
-  background-color: white;
+  background-color: #eae7dc;
 
 }
 .container {
@@ -15,8 +15,8 @@ body {
   text-align: left;
   padding-top: 20px;
   margin-left: 150px;
-  font-family:Acme;
-  color:grey;
+  font-family:'Roboto', sans-serif;;
+  color:#05386b;
 }
 .enquiry {
   position: absolute;
@@ -24,33 +24,33 @@ body {
   right: 10px;
 }
 #enquiry {
- font-family: Acme;
- color:grey;
+ font-family: 'Lato', sans-serif;;
+ color:#05386b;
 }
 .pageHeading {
-  font-family: Acme;
-  color:grey;
+  font-family: 'Roboto', sans-serif; ;
+  color:#05386b;
   text-align: center;
   font-size: 30px;
 }
 .navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: #dac3a5;
   margin-bottom: 30px;
 }
 
 .navbar a {
   float: left;
-  font-family: Acme ;
+  font-family: 'Lato', sans-serif; ;
   font-size: 20px;
-  color: grey;
+  color: #05386b;
   text-align: center;
   padding: 14px 30px;
   text-decoration: none;
 }
 
 .dropdown {
-  font-family: Acme ;
+  font-family: 'Lato', sans-serif; ;
   font-size: 20px;
   float: left;
   overflow: hidden;
@@ -58,10 +58,10 @@ body {
 
 .dropdown .dropbtn {
   font-size: 20px; 
-  font-family: Acme ; 
+  font-family: 'Lato', sans-serif; ; 
   border: none;
   outline: none;
-  color: grey;
+  color: #05386b;
   padding: 14px 30px;
   background-color: inherit;
   font-family: inherit;
@@ -69,13 +69,13 @@ body {
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color:  #ff1a1a;
+  background-color:  #bab2b5;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: black;
+  background-color: #dac3a5;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -83,7 +83,7 @@ body {
 
 .dropdown-content a {
   float: none;
-  color: grey;
+  color: #05386b;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -91,7 +91,7 @@ body {
 }
 
 .dropdown-content a:hover {
-  background-color:  #ff1a1a;
+  background-color:  #bab2b5;
 }
 
 .dropdown:hover .dropdown-content {
@@ -167,7 +167,7 @@ navBar a {
   margin-left: 50px;
   
   /*font-family*/: "Droid Serif", serif;
-  font-style: italic;
+  font-style: bold;
 }
 .story h3 {
   margin-bottom: 0px;
@@ -198,8 +198,8 @@ navBar a {
     text-align: center;
     max-width: 400px;
     margin: 0px 50px;
-    font-family: Acme;
-    color: grey;
+    font-family: 'Lato', sans-serif;;
+    color: #05386b;
   }
   
   .flex > section > h2 {
@@ -242,12 +242,12 @@ navBar a {
 .flex-container > div {
   width: 30%;
   margin: 10px;
-  text-align: center;
+  text-align: right;
   line-height: 75px;
   font-size: 30px;
   margin-left: 20px;
-  font-family: Acme;
-  color: grey;
+  font-family: 'Lato', sans-serif;;
+  color: #05386b;
 }
 .hpimage {
   width: 100%;
@@ -258,12 +258,13 @@ navBar a {
   margin: 0;
 }
 .footer {
-  background-color: white;
-  color: grey;
-  font-family: Acme;
+  background-color: #eae7dc;
+  color: #05386b;
+  font-family: 'Lato', sans-serif;;
   text-align: center;
   padding: 90px;
   margin-top: 50px;
+  position: bottom;
 }
 .fa {
   padding: 20px;
@@ -280,20 +281,23 @@ navBar a {
 
 .fa-facebook {
   background: #3B5998;
-  color: white;
+  color: #eae7dc;
+  font size: 30px
 }
 
 .fa-instagram {
-  background: white;
-  color: grey;
+  background: #eae7dc;
+  color: #405DE6;
+  font size: 30px
 }
 
 
 .linkBtn{
-    background-color: white;
+    background-color: #dac3a5;
     text-decoration: none;
     padding: 10px;
     font-size: 20px;
+    color: #05386b
 }
 
 
@@ -306,8 +310,8 @@ navBar a {
   margin: 10px;
   padding: 20px;
   font-size: 30px;
-  font-family: Acme;
-  color: grey;
+  font-family: 'Lato', sans-serif;
+  color: #05386b;
   
 }
 .flex-cont p{
@@ -320,20 +324,76 @@ navBar a {
 
 
 .signup{
-  text-align: center;
+max-width:400px;
+  margin:50px auto;
+  background:#fff;
+  border-radius:2px;
+  padding:20px;
+  font-family: 'Lato', sans-serif;
+
+}
+.singup ul{
+list-style:none;
+  padding:0;
+  margin:0;
+}
+.signup li{
   display: block;
-  padding: 100px 0px;
-  opacity: 2.0;
-  background-color: white;
-  font-family: Acme;
-  color: grey; 
+  padding: 9px;
+  border:1px solid #DDDDDD;
+  margin-bottom: 30px;
+  border-radius: 3px;
+}
+.signup li:last-child{
+  border:none;
+  margin-bottom: 0px;
+  text-align: center;
+}
+.signup li > label{
+  display: block;
+  float: left;
+  margin-top: -19px;
+  background: #FFFFFF;
+  height: 14px;
+  padding: 2px 5px 2px 5px;
+  color: #B9B9B9;
+  font-size: 14px;
+  overflow: hidden;
+  font-family: 'Lato', sans-serif;
+}
+.signup input{
+  border: none;
+  padding: 10px 80px 10px 80px;
+  border-bottom: 3px solid #5994FF;
+  border-radius: 3px;
+}
+.signup button{
+  background: #2471FF;
+  border: none;
+  padding: 10px 20px 10px 20px;
+  border-bottom: 3px solid #5994FF;
+  border-radius: 3px;
+  color: #D2E2FF;
+}
+.signup li > span{
+  background: #F3F3F3;
+  display: block;
+  padding: 3px;
+  margin: 0 -9px -9px -9px;
+  text-align: center;
+  color: #C0C0C0;
+  font-family: 'Lato', sans-serif;
+  font-size: 11px;
+}
+.signup textarea{
+  resize:none;
 }
 .box {
-  background-color: white;
-  font-family: Acme;
-  color: grey;
+  background-color: #eae7dc;
+  font-family: 'Lato', sans-serif;;
+  color: #05386b;
 }
 #box {
-  font-family: Acme;
-  color: grey; 
+  font-family: 'Lato', sans-serif;;
+  color: #05386b; 
 }

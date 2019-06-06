@@ -1,7 +1,7 @@
 <html
 <style >
 <link rel="stylesheet" href="style.css" />
-
+<link href="https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap" rel="stylesheet">
 </style>
 
 <?php
@@ -29,7 +29,7 @@ function getcats(){
 		$cat_title = $row_cats['cat_title'];
         $cat_id = $row_cats['cat_id'];
 
-    echo "<div class=even><a href='products.php?cat=$cat_id'>$cat_title</a></div>";
+    echo "<div class=heading1><a href='products.php?cat=$cat_id'>$cat_title</a></div>";
 	}
 }?>
 
@@ -54,9 +54,9 @@ function get_pro_cat(){
         $product_price = $row_pro_cat['pro_price'];
         $product_image = $row_pro_cat['image'];
         $product_desc=$row_pro_cat['pro_desc'];
-        echo"<div class='grid-container'>
+        echo"<div class='flex-container'>
+        <div class='product_img'><span class='images'><img src='product_images/$product_image' alt='' border='2'  /></a></div>
           <div class='product_title'><span class='Title'>$product_title</a></div>
-          <div class='product_img'><span class='images'><img src='product_images/$product_image' alt='' border='20'  /></a></div>
           <div class='prod_price'><span class='price'>$ $product_price</span></div>
 </div>
        ";
