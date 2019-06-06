@@ -1,116 +1,85 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>OFFERS</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
-    <script src="slider.js"></script>
-  </head>
-
-  <body>
-    <div class="container"><a href="index.html"><img src="images/elitehandcrafts.png" id="logo" /></a></div>
-    <div><h1 class="heading1" style="font-family:Acme;color:gold">ELITE HANDCRAFTS</h1></div>
-    <br />
-   <div class="navbar">
-      <a href="index.html">HOME</a>
-      <a href="offers.html">OFFERS</a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+</head>
+<body>
+  <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="offers.html">Offers</a>
       <div class="dropdown">
-        <button class="dropbtn"> PRODUCTS
+        <button class="dropbtn"> Products
         </button>
         <div class="dropdown-content">
-            <a href="himalayan_salt.html">HIMALAYAN SALT</a>
-            <a href="bedroom.html">BEDROOM AND LIVING</a> 
-            <a href="outdoor.html">OUTDOOR</a>
-            <a href="others.html">OTHERS</a>
+            <a href="himalayan_salt.html">Himalayan Salt</a>
+            <a href="bedroom.html">Bedroom & Living</a> 
+            <a href="outdoor.html">Outdoor</a>
+            <a href="others.html">Others</a>
         </div>
       </div> 
-      <a href="locations.html">LOCATIONS</a>
-      <a href="contact.html">CONTACT US</a>
-      <a href="VIP.html">BECOME A VIP</a>
+      <a href="locations.html">Locations</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="VIP.html">Become A VIP</a>
     </div>
+    <div class="container">
+
+      <input type="radio" name=image1 id="one" checked>
 
 
-    <div class="pageHeading"><h4 style=" font-style: bold ;font-family: Acme;
-  font-size: 40px; color:gold">OFFERS</h4></div>
-<!-- Slideshow container -->
-<div class="slider">
+      <input type="radio" name=image2 id="two">
 
-    <div id="img">
-      <img src="e.jpg">
+      <input type="radio" name=image3 id="three">
+      
+      <input type="radio" name=image4 id="four">
+
+     
+
+      <div class="display-image"></div>
+      <div class="display-desc"></div>
+      
+
     </div>
+     <footer>
+            <div id="left-footer">
+                
+                <p>
+                    <ul>
+                        <li>
+                            <a href="index.html"><h3>Home</h3></a>
+                        </li>
+                        <li>
+                            <a href="about.html"><h3>About</h3></a>
+                        </li>
+                    </ul>
+                </p>
+            </div>
 
-  </div>
-
-  <script>
-
-    var images = ['images/offers1.jpg', 'images/offers2.jpg', 'images/offers3.jpg'];
-
-    var x = 0;
-
-    var imgs = document.getElementById('img');
-
-    setInterval(slider, 2000);
-
-
-    function slider() {
-
-      if (x < images.length) {
-        x = x + 1;
-      } else {
-        x = 1;
-      }
-
-
-      imgs.innerHTML = "<img src=" + images[x - 1] + ">";
-
-
-    }
-
-
-  </script>
-
-
-  <style type="text/css">
-    .slider {
-      width: 80%;
-      height: 500px;
-      margin: 30px auto;
-      box-sizing: border-box;
-      overflow: hidden;
-      box-shadow: 5px 5px 10px grey;
-
-    }
-
-    img {
-      width: 80%;
-      height: 80%;
-      animation: ani 2s linear;
-      position: absolute;
-
-    }
-
-    @keyframes ani {
-      0% {
-        transform: scale(1.2);
-      }
-      10% {
-        transform: scale(1);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-  </style>
+            <div id="right-footer">
+                <h3>Follow us on</h3>
+                <div id="social-media-footer">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p>CopyRights</p>
+            </div>
+        </footer>
 
 
- <div>
-    <footer class="footer" style="color: gold">
-      <h2 style="font-family: Acme">ELITE HANDCRAFTS</h2>
-      <p style="font-family: Acme"> COPYRIGHT 2019 ELITE HANDCRAFTS. ALL RIGHTS RESERVED </p>
-      <a href="https://www.facebook.com/EliteHandcrafts02/" class="fa fa-facebook" style="font-size: 30px"></a>
-      <a href="https://www.instagram.com/elitehandcrafts/?hl=en" class="fa fa-instagram" style="font-size: 30px"></a>
-    </footer>
-    </div>
-  </body>
+
+
+</body>
 </html>
