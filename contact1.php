@@ -5,7 +5,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>CONTACT US</title> 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <link rel="stylesheet" href="style.css" >
         <link href="https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap" rel="stylesheet">
         <script src="form.js"></script>
@@ -14,28 +13,27 @@
  require "header.php";
   ?>
     <body>
- <form class="contactus" id="reused_form">
-    <h2>CONTACT US</h2>
+ <form class="signup">
 <ul>
 <li>                        
-<label> Name</label>
-<input type="text" name="name" class="field-style field-split">
-<span>Enter your name here</span>
+<label><i class="fa fa-user"></i> Name</label>
+<input type="text" name="name">
+<span>Enter your name here></span>
 </li>
 <li>
-<label> Email</label>
-<input type="email" name="email" class="field-style field-split">
-<span>Enter a valid e-mail id</span>
+<label><i class="fa fa-envelope"></i> Email</label>
+<input type="email" name="email">
+<span>Enter a valid e-mail id></span>
 </li>
 <li>
-<label> Contact</label>
-<input type="text" name="contact" class="field-style field-split">
-<span>Enter Mobile Number</span>
+<label><i class="fa fa-phone"></i> Contact</label>
+<input type="text" name="contact" >
+<span>Enter Mobile Number></span>
 </li>
 <li>                                    
-<label> Message</label>
-<textarea type="textarea" name="message" class="field-style"></textarea>
-<span>Enter your message</span>
+<label><i class="fa fa-comment"></i> Message</label>
+<input type="text" name="message">
+<span>Enter your message></span>
 </li>
 <li>
 <button>SEND</button>

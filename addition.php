@@ -18,75 +18,36 @@
 <title>Elitehandcrafts Admin Area</title>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
 <link rel="stylesheet" type="text/css" href="style.css" />
+   <link href="https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap" rel="stylesheet">
+
 <!--[if IE 6]>
 <link rel="stylesheet" type="text/css" href="iecss.css" />
 <![endif]-->
-<script type="text/javascript" src="js/boxOver.js"></script>
-
-
-<style type="text/css">
-.style1 {
-	width: 585px;
-	float: left;
-	padding: 5px 10px;
-	text-align: center;
-}
-.style2 {
-	width: 520px;
-	height: 33px;
-	float: left;
-	padding: 0 0 0 40px;
-	margin: 0 0 0 12px;
-	_margin: 0 0 0 6px;
-	line-height: 33px;
-	font-size: 12px;
-	color: #847676;
-	font-weight: bold;
-	background: url(images/bar_bg.gif) no-repeat center;
-	text-align: center;
-}
-.style3 {
-	width: 355px;
-	float: left;
-	padding: 0px 0 0 75px;
-	text-align: left;
-}
-</style>
 
 
 </head>
+<div class="container"><a href="index.php"><img src="images/elitehandcrafts.png" id="logo" /></a></div>
+<br>
+<br>
+<div class= linkBtn>
+<a href="admin_panel.php" >ADMIN PANEL</a>
+<a href="delete.php">DELETE CONTENT</a>
+</div>
 <body>
-<div id="main_container">
-  <div id="header">
-    <div id="logo"> <a href="#"><img src="images/logo.png" alt="" border="0" width="237" height="140" /></a> </div>
-    <!-- end of oferte_content-->
-  </div>
-  <div id="main_content">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <!-- end of menu tab -->
-    <!-- end of left content -->
-
+<div class="contactus">
+  
     <form action="" method="POST" enctype="multipart/form-data">
-    <div class="style1">
-      <div class="style2">INSERT NEW PRODUCTS HERE</div>
-      <div class="prod_box_big">
-        <div class="top_prod_box_big"></div>
-        <div class="center_prod_box_big">
-
-
-
-          <div class="style3">
-
-
-
-             <div class="form_row">
-              <label class="contact"><strong>Product Title:</strong></label>
+   
+      <h4>INSERT NEW PRODUCTS HERE</h4>
+     
+             <ul>
+              <li>
+              <label><strong>Product Title:</strong></label>
               <input type="text" class="contact_input" name="product_title" required />
-            </div>
-
-
-            <div class="form_row">
-              <label class="contact"><strong>Product Category:</strong></label>
+              <span>Enter product title</span>
+              </li>
+              <li>
+              <label><strong>Product Category:</strong></label>
 
            <select name="product_cat" required>
 
@@ -98,7 +59,7 @@
 
 
 	$get_cats = "select * from categories";
-	$run_cats = mysqli_query($con,$get_cats);
+	$run_cats = mysqli_query($conn,$get_cats);
 
 	while($row_cats=mysqli_fetch_array($run_cats)){
 
@@ -114,52 +75,42 @@
            ?>
 
            </select>
+          <span>Choose product category</span>
 
-            </div>
 
-            <div class="form_row">
-            <label class="contact"><strong>Product Image:</strong></label>
+         </li>  
+
+          
+              <li>
+            <label><strong>Product Image:</strong></label>
             <input type="file" class="contact_input" name="product_image" required />
-          </div>
-          <div class="form_row">
-            <label class="contact"><strong>Product Price:</strong></label>&nbsp;
-            <input type="text" class="contact_input" name="product_price" required /></div>
-          <div class="form_row">
-          <div class="form_row">
-            <label class="contact"><strong>Product Description:</strong></label>
+            <span>Select product image</span>
+
+            </li>
+            <li>
+            <label><strong>Product Price:</strong></label>&nbsp;
+            <input type="text" class="contact_input" name="product_price" required />
+
+            </li>
+            <li>
+            <label><strong>Product Description:</strong></label>
            <textarea name="product_desc" class="contact_input" cols="33" rows="7" required></textarea>
-          </div>
+           <span>Enter product description</span>
 
+            </li>
+            &nbsp;
+             <li>
+            <input type="submit"  name="index" value="INSERT" style="width: 336px"/>
+             </li>
+            &nbsp;<br />
 
-     <div class="form_row">
-                          &nbsp;<input type="submit" class="contact_input" name="index" value="INSERT" style="width: 336px"/>&nbsp;<br />
-
-
-          </div>
-
-
-
-</div>
-
-
-        </div>
-      </div>
-
-
-
-      <div class="bottom_prod_box_big"></div>
-    </div>
-  &nbsp;<br>
-  </div>
-
+</ul>
 </form>
-  <!-- end of center content -->
-  <!-- end of right content -->
-</div>
-<!-- end of main content -->
+          </div>
 
-<!-- end of main_container -->
+
 </body>
+
 </html>
 
 
@@ -180,7 +131,7 @@ if(isset($_POST['index'])){
  move_uploaded_file($product_image_tmp,"product_images/$product_image");
 
  $insert_product = "insert into products (pro_cat,pro_title,pro_price,pro_desc,image) values ('$product_cat','$product_title','$product_price','$product_desc','$product_image')";
- $run_product = mysqli_query($con,$insert_product);
+ $run_product = mysqli_query($conn,$insert_product);
 
  if($run_product){
 

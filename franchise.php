@@ -4,7 +4,9 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Franchise Enquiry Form</title> 
+        <title>Franchise Enquiry Form</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
         <link href="https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css" >
         <script src="form.js"></script>
@@ -13,41 +15,43 @@
  require "header.php";
   ?>
     <body >
-        
-                                <form id="reused_form">
-                                    <div class="form-group">
-                                        <label><i class="fa fa-user" aria-hidden="true"></i> Name</label>
-                                        <input type="text" name="name" class="form-control" placeholder="Enter Name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label><i class="fa fa-envelope" aria-hidden="true"></i> Email</label>
-                                        <input type="email" name="email" class="form-control" placeholder="Enter Email">
-                                    </div>
-                                    <div class="form-group">
-                                        <label><i class="fa fa-phone" aria-hidden="true"></i> Contact</label>
-                                        <input type="text" name="contact" class="form-control" placeholder="Enter Mobile Number"></input>
-                                    </div>
-                                    <div class="form-group">
-                                        <label><i class="fa fa-comment" aria-hidden="true"></i> Message</label>
-                                        <textarea rows="3" name="message" class="form-control" placeholder="Type Your Message"></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <button class="btn btn-raised btn-block btn-danger">Post</button>
-                                    </div>
-                                </form>
-                                <div id="error_message" style="width:100%; height:100%; display:none; ">
-                                    <h4>
-                                        Error
-                                    </h4>
-                                    Sorry there was an error sending your form. 
-                                </div>
-                                <div id="success_message" style="width:100%; height:100%; display:none; ">
-<h2>Success! Your Message was Sent Successfully.</h2>
+    <form class="franchise" id="reused_form">
+    <h2>ELITE FRANCHISE</h2>
+<ul>
+<li>                        
+<label> Name</label>
+<input type="text" name="name" class="field-style field-split">
+<span>Enter your name here</span>
+</li>
+<li>
+<label> Email</label>
+<input type="email" name="email" class="field-style field-split">
+<span>Enter a valid e-mail id</span>
+</li>
+<li>
+<label> Contact</label>
+<input type="text" name="contact" class="field-style field-split">
+<span>Enter Mobile Number</span>
+</li>
+<li>                                    
+<label> Message</label>
+<textarea type="textarea" name="message" class="field-style"></textarea>
+<span>Enter your message</span>
+</li>
+<li>
+<button>SEND</button>
+</li>                                   
+</ul>
+</form>
+<div id="error_message" style="width:100%; height:100%; display:none; ">
+ <h4> Error! Sorry there was an error sending your form. </h4>
 </div>
-  <div>
+<div id="success_message" style="width:100%; height:100%; display:none; ">
+<h2>Success! Your Message was Sent Successfully.</h2>    
+</div>                             
    <?php
  require "footer.php";
   ?>
-  </div>
+  
     </body>
 </html>

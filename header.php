@@ -12,7 +12,7 @@
 <br />
     <div class="navbar">
       <a href="index.php">HOME</a>
-      <a href="offers.php">OFFERS</a>
+      <a href="offer.php">OFFERS</a>
       <a href="products.php">PRODUCTS</a> 
       <a href="locations.php">LOCATIONS</a>
       <a href="contact.php">CONTACT US</a>

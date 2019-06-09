@@ -8,10 +8,10 @@
  require "header.php";
   ?>
 <body>
-  <div class="pageHeading">
-    <h3>ELITE STAR CLUB</h3>
+<h2 class="pageHeading">ELITE STAR CLUB</h2>  
+<img src="images/banner.jpg" height="400px" width="1350px" >
       <div class="signup">
-           <h4>SIGNUP</h4>
+           <h2>SIGNUP</h2>
            <form action="registration.php" method="post">
            <ul>
            <li>
@@ -38,7 +38,7 @@
            <button type="submit" name="signup-submit" value="signup">SIGNUP</button>
          
            <li>
-           <h6>ALREADY HAVE AN ACCOUNT ?<br><a href="login.php">LOGIN</a></h6>
+           <h4>ALREADY HAVE AN ACCOUNT ?<br><a href="login.php">LOGIN</a></h4>
            </li>
            </ul>
            </form>

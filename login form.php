@@ -39,14 +39,14 @@ else {
     			$session['userId'] = $row['idusers'];
     			$session['userUid'] = $row['uidUsers'];
 
-    			header("location: index1.php?login=success");
+    			header("location: offers.php?login=success");
     			exit();
 
     		}
 
     	}
     	else {
-    		header("location: offers.php?error=nouser");
+    		header("location: elitestarclub.php?error=nouser");
     		exit();
     	}
 

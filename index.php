@@ -69,24 +69,28 @@
 <p>The main benefits of dealing with Elite Handcrafts are the fast moving, great value range of authentic artefacts that we source from India. Our range will give you colourful, culturally correct items that sell fast, delivering great profit margins for your store. Our extensive range of incense includes the ever popular Nag Champa just as one part of our current selection of genuine Indian incense.
       </p>
     </div>
-    <div class="flex-container">
+    <div class="containerhome">
       <div>
         <img src="images/salt.jpg" class="hpimage" />
-        <p><span class="demo"> HIMALAYAN SALT</p>
+        
       </div>
       <div>
         <img src="images/bedroom.jpg" class="hpimage" />
-        <p> <a href="bedroom.php" class="linkBtn"> BEDROOM AND LIVING </a></p>
+        
       </div>
       <div>
         <img src="images/outdoor.jpg" class="hpimage" />
-        <p> <a href="outdoor.php" class="linkBtn">OUTDOOR</a></p>
+        
       </div>
       <div>
         <img src="images/others.jpg" class="hpimage" />
-        <p> <a href="others.php" class="linkBtn">OTHERS</a></p>
+        
       </div>
   </div>
+  <br>
+  <br>
+  <br>
+  <br>
 <?php
  require "footer.php";
   ?>

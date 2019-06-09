@@ -2,10 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+   <link href="https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap" rel="stylesheet">
     <title></title>
   </head>
+  <div class="container"><a href="index.php"><img src="images/elitehandcrafts.png" id="logo" /></a></div>
+  <div class="linkBtn">
+<a href="addition.php">ADDITION</a>
+<a href="admin_panel.php">ADMIN PANEL</a>
+</div>
+<br>
+<br>
+<br>
+<br>
   <body>
-<table border=1 cellpadding=1 cellspacing=1>
+<table class="table" border=1 cellpadding=1 cellspacing=1>
   <tr>
     <th>Title</th>
     <th>Product price</th>
@@ -13,9 +24,9 @@
     </tr>
 <?php
 $servername = "localhost";
-$dbUsername = "root";
-$dbPassword = "";
-$dbName = "elite";
+$dbUsername = "ictatjcu_elites";
+$dbPassword = "123zxc";
+$dbName = "ictatjcu_elites";
 
 $con = mysqli_connect($servername, $dbUsername, $dbPassword, $dbName);
 
@@ -23,15 +34,8 @@ if(!$con) {
 	die("connection failed: ".mysqli_connect_error());
 }
 ?>
-<div class="admin">
-<a href="addition.php">Addition</a>
-<a href="adminpanel.php">Admin page</a>
-</div>
-<style>
-.admin{
-  display: inline-block;
-}
-</style>
+
+
 <?php
   //selecting
   $select="SELECT * FROM products";

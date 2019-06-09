@@ -10,9 +10,30 @@
   ?>
   <body>
     <div class="pageHeading"><h3>OFFERS</h3></div>
+<div class="container1">
 
- <?php
+      <input type="radio" name=image1 id="one" checked>
+
+
+      <input type="radio" name=image2 id="two">
+
+      <input type="radio" name=image3 id="three">
+      
+      <input type="radio" name=image4 id="four">
+
+     
+
+      <div class="display-image"></div>
+      <div class="display-desc"></div>
+      
+
+    </div>
+  </body>
+  <br>
+  <br>
+  <br>
+  <br>
+  <?php
  require "footer.php";
   ?>
-  </body>
 </html>

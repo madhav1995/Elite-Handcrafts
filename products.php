@@ -14,7 +14,10 @@
   <?php
    getcats();
 
+   getpro();
+
   get_pro_cat();
+  
 ?>
 </body>
  <?php
